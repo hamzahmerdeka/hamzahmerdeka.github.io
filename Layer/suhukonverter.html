@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo-Converter</title>
+</head>
+
+
+<style>
+.tabel {
+  text-align: center;
+  background-color:darkcyan;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-left: 200px;
+  margin-right:200px;
+  
+}
+.kotakhasil { 
+    background-color: white;
+}
+
+</style>
+
+
+<body>
+  
+<script type="text/javascript" src="suhukonverted.js"></script>
+  
+  
+<div class="tabel">
+    <h1>Termo-Converter </h1>
+    <fieldset>
+<div><h4>Masukkan Nilai Suhu : </h4></div>
+<input type="text" id="suhuinput" />
+<br>
+<div><h4>Pilih suhu dalam*: </h4></div>
+<select size="4" id="pilihan">
+    <option value="c">Celcius</option>
+    <option value="r">Reamur</option>
+    <option value="f">Fahrenheit</option>
+    <option value="k">Kelvin</option>
+  </select>
+  <br>
+  <h4>Hasil:</h4>
+  <div class="kotakhasil">
+  <p>
+    <fieldset>
+    <span id="hasil1"></span> 
+    <span id="hasil2"></span>
+    </fieldset>
+  </p>
+</div>
+</fieldset>
+<button type="button" onclick="convert()">Konversi</button>
+<button type="button" onclick="document.getElementById('hasil1').innerHTML = '';document.getElementById('suhuinput').value = ''">Hapus</button>
+</div>
+</body>
+</html>

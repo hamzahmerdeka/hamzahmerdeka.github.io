@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JODOHKU</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class='header'>RAMAL JODOHMU</div>
+    <div class='content'>
+        <div class='input-male'>masukan nama pria</div>
+        <input type="text" id='male'>
+        <div class='input-female'>masukan nama wanita</div>
+        <input type="text" id='female'>
+        <button type="button" class="submit" onclick="lovecalculate()">Hasil</button>
+        <div id="hasil" > ini hasil yaa</div>
+    
+    </div>
+    <div class='footer'>THANKYOU</div>
+    
+    <script>
+       function lovecalculate() {
+           let note =''
+        
+           let random = Math.round(Math.random() * 100)
+           console.log(random+'%')
+          if (random<5){
+              note= ('Udeh kagak pantes lu sama doi, ngaca bray');
+          }else if(random<10){
+              note= ('Mimpi lu ngab, bangun woy !!!!!');
+          }else if (random<20){
+              note= ('Gue tau lu suka sama DOI tapi pastiin dompet lu tebel kaya muke lo');
+          }else if(random<30){
+              note= ("Ahhh eluh lagi!, bray gini, ada pepatah mengatakan cinta itu buta, tapi doi udah melek dari dulu");
+          }else if(random<40){
+              note= ("sebenernya lu ada kesempatan, tapi lu ambil dana umum aja yaa?");
+          }else if(random<50){
+              note= ("bray gue berdoain agar doi matanya burem, kalau kagak ,SELESAI HIDUP LU");
+          }else if(random<60){
+              note= (" Ngab lu cocok sama doi tapi ADA ORANG LAIN YANG LEBIH COCOK sama doi");
+          }else if(random<70){
+              note= ('hmmmm cakep nh, pastiin semua jalan sesuai rencana lu, dia udh liat perjuangan hidup lu ngab');
+          }else if (random<80){
+              note= (" udh bray cepet-cepet ditembak!, itu dia setiap chatan sama lu udh berbunga-bunga takut dosa riba bray");
+          }else if(random<90){
+              note= ("KAWIN KAWIN MINGGU DEPAN KAWIN KAWIN");
+          }else if (random<=100){
+              note= ('langit bumi bersaksi, jodoh anda sebentar lagi berisi');
+          }
+          
+          let result=document.getElementById('hasil')
+        result.innerHTML= `${random} % ${note}`
+       } 
+
+       
+    </script>
+</body>
+</html>
